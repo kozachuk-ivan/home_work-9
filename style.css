@@ -1,0 +1,187 @@
+@keyframes move-ball {
+    from {
+        left: 0;
+    }
+
+    to {
+        left: calc(100% - 100px);
+    }
+}
+
+@keyframes container-animation {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes box-one {
+    from {
+        transform:translate(0);
+    }
+
+    to {
+        transform: translate(-100%, 0);
+    }
+}
+
+@keyframes box-two {
+    from {
+        transform:translate(0);
+    }
+    
+    to {
+        transform: translate(100%, 0);
+    }
+}
+
+@keyframes box-three {
+    from {
+        transform:translate(0);
+    }
+    
+    to {
+        transform: translate(0, 100%);
+    }
+}
+
+@keyframes box-four {
+    from {
+        transform:translate(0);
+    }
+    
+    to {
+        transform: translate(0, -100%);
+    }
+}
+
+@keyframes car {
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: calc(100% - 67vw);
+    }
+}
+
+@keyframes car-whells {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes car-whells {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+.container {
+    position: relative;
+    animation: 2s container-animation 2s infinite alternate;
+}
+
+
+.ball {
+    border-radius: 50%;
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    animation-name: move-ball;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 3s;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+
+    animation: 5s move-ball 3s infinite linear alternate;
+
+    position: relative;
+}
+
+.card-section {
+    margin-top: 100px;
+    /* position: relative; */
+    width: 200px;
+    height: 200px;
+    background-color: #000;
+    margin-left: 300px;
+}
+
+.card {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+}
+
+.card--red {
+    border: 2px solid red;
+    animation: 1s box-one 2s infinite linear alternate;
+}
+
+.card--yellow {
+    border: 2px solid yellow;
+    animation: 1s box-two 2s infinite linear alternate;
+}
+
+.card--blue {
+    border: 2px solid blue;
+    animation: 1s box-three 2s infinite linear alternate;
+}
+
+.card--green {
+    border: 2px solid green;
+    animation: 1s box-four 2s infinite linear alternate;
+}
+
+
+/* .car-container {
+    max-width: 1130px;
+    padding: 15px;
+    margin: 0 auto;
+} */
+
+.car-img {
+    position: relative;
+    display: block;
+    animation: 3s car 3s infinite linear alternate-reverse;
+    width: 67vw;
+}
+
+.car-picture {
+    width: 100%;
+    height: 100%;
+}
+
+.car-wheel-picture {
+    position: absolute;
+    bottom: -3vw;
+    left: 6.3vw;
+    max-width: 12.3vw;
+    animation: car-whells 3s infinite linear alternate;
+}
+
+.car-wheel-back-picture {
+    position: absolute;
+    bottom: -3vw;
+    right: 5.7vw;
+    max-width: 12.3vw;
+    animation: car-whells 3s infinite linear alternate;
+} 
+
+
+
+
+
